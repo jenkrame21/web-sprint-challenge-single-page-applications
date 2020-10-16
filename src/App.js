@@ -2,15 +2,17 @@ import React from "react";
 import PizzaForm from './PizzaForm';
 
 const App = () => {
+
+  const [pizzaLovers, setPizzaLovers] = useState([]);
+
   return (
     <>
-      <header>
+      <header className="App">
         <h1>Lambda Eats</h1>
-        <p>You can remove this code and create your own header</p>
+        <nav>
+          <PizzaForm pizzaLovers={pizzaLovers} setPizzaLovers={setPizzaLovers}/>
+        </nav>
       </header>
-      <nav>
-        <PizzaForm />
-      </nav>
     </>
   );
 };
