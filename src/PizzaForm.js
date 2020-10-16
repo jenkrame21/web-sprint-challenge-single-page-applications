@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Pizza from './Pizza';
+import React from 'react';
 
 export default function PizzaForm(props) {
 
@@ -32,7 +31,7 @@ export default function PizzaForm(props) {
                 />
             </label>
             <h2>Pizza Size: </h2>
-            <label>Choose your size
+            <label>Choose a Size
                 {/* Dropdown */}
                 <select onChange={onChange} value={values.pizzaSize} name='pizzaSize'>
                     <option value=''>-- Select a Size --</option>
