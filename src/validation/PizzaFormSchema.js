@@ -15,4 +15,5 @@ export default yup.object().shape({
     mushroom: yup.boolean(),
     bacon: yup.boolean(),
     spinach: yup.boolean(),
+    special_instructions: yup.string()
 });

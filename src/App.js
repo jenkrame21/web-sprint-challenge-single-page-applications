@@ -29,13 +29,16 @@ import schema from './validation/PizzaFormSchema'
     sausage: false,
     olives: false,
     pineapple: false,
-    garlic: false
+    garlic: false,
+    // text input
+    special_instructions: ''
   };
 
   const initialFormErrors = {
     name: '',
     pizzaSize: '',
-    sauce: ''
+    sauce: '',
+    special_instructions: ''
   }
 
   const initialPizzaLovers = [];
