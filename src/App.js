@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Pizza from './Pizza'
 import PizzaForm from './PizzaForm';
-import PizzaFormSchema from './validation/PizzaFormSchema'
 
 import axios from 'axios';
 import * as yup from "yup";
+import schema from './validation/PizzaFormSchema'
 
 
   const initialFormValues = {
@@ -60,7 +60,7 @@ export default function App() {
       });
   };
 
-  const postNewFriend = (newOrder) => {
+  const postNewOrder = (newOrder) => {
     axios
       .post("http://localhost:3000/pizzaOrder", newOrder)
       .then((res) => {
@@ -75,7 +75,7 @@ export default function App() {
   const inputChange = (name, value) => {
 
     yup
-      .reach(PizzaFormSchema, name)
+      .reach(schema, name)
       .validate(value)
       .then(() => {
         setFormErrors({
@@ -97,23 +97,23 @@ export default function App() {
   };
 
   const formSubmit = () => {
-    const newFriend = {
-      username: formValues.username.trim(),
-      email: formValues.email.trim(),
-      role: formValues.role.trim(),
-      civil: formValues.civil.trim(),
-      // 🔥 STEP 7- WHAT ABOUT HOBBIES?
-      hobbies: ["coding", "reading", "hiking"].filter(
-        (hobby) => formValues[hobby]
+    const newOrder = {
+      name: formValues.name.trim(),
+      pizzaSize: formValues.pizzaSize.trim(),
+      sauce: formValues.sauce.trim(),
+      toppings: ["pepperoni", "mushroom", "bacon", 'spinach'].filter(
+        (topping) => formValues[topping]
       ),
     };
-    // 🔥 STEP 8- POST NEW FRIEND USING HELPER
-    postNewFriend(newFriend);
+    postNewOrder(newOrder);
   };
 
   useEffect(() => {
-    // 🔥 STEP 9- ADJUST THE STATUS OF `disabled` EVERY TIME `formValues` CHANGES
-    PizzaFormSchema.isValid(formValues).then((valid) => {
+    getPizzaLovers();
+  }, []);
+
+  useEffect(() => {
+    schema.isValid(formValues).then((valid) => {
       setDisabled(!valid);
     });
   }, [formValues]);
@@ -127,6 +127,8 @@ export default function App() {
             values={formValues}
             change={inputChange}
             submit={formSubmit}
+            disabled={disabled}
+            errors={formErrors}
           />
           {pizzaLovers.map((pizza) => {
             return <Pizza key={pizza.id} details={pizza} />;
