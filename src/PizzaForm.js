@@ -17,10 +17,11 @@ export default function PizzaForm(props) {
 
     return (
         <form className="pizza-form container" onSubmit={onSubmit}>
-            <h1>Build Your Own Pizza</h1>
+            <h2 className="mainSubTitle">Build Your Own Pizza</h2>
             <h2>Name: </h2>
             <div className="containers">
-                <label>Type your Name 
+                <label className="additives">
+                    <p className="choices">Type your Name </p>
                     {/* Text Field */}                
                     <input
                         id='name'
@@ -34,7 +35,8 @@ export default function PizzaForm(props) {
             </div>
             <h2>Pizza Size: </h2>
             <div className="containers">
-                <label>Choose a Size
+                <label className="additives">
+                    <p className="choices">Choose a Size</p>
                     {/* Dropdown */}
                     <select onChange={onChange} value={values.pizzaSize} name='pizzaSize'>
                         <option value=''>-- Select a Size --</option>

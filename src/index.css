@@ -36,14 +36,20 @@ label {
   align-items: center;
 }
 
+label.additives {
+  display: flex;
+  flex-wrap: column, nowrap;
+}
+
 input {
   margin-left: 10px;
+  padding: 2%;
 }
 
 input#name {
-  padding: 3%;
   border-radius: 10px;
   width: 100%;
+  margin: 0;
 }
 
 input#special_instructions {
@@ -54,9 +60,9 @@ input#special_instructions {
 }
 
 select {
-  padding: 3%;
+  padding: 2%;
   margin: 0;
-  width: 70%;
+  width: 30%;
   border-radius: 10px;
 }
 
@@ -87,7 +93,7 @@ button {
   font-weight: bold;
 }
 
-button:hover{
+button:hover {
   color: brown;
   background-color: #fff;
   transition: 0.2s ease-in-out;
@@ -98,7 +104,27 @@ button:hover{
   flex-direction: column;
 }
 
+footer {
+  color: #fff;
+  padding: 0 0 3% 0;
+}
 
+.mainSubTitle {
+  background-color: black;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2% 3%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+p.choices {
+  margin-top: 0;
+}
 
 
 

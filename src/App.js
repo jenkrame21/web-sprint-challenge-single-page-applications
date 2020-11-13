@@ -141,6 +141,9 @@ export default function App() {
           })}
         </nav>
       </header>
+      <footer>
+        <p>Copyrighted © Jennifer Kramer 2020</p>
+      </footer>
     </>
   );
 };
