@@ -86,16 +86,18 @@ div.containers {
 
 button {
   padding: 3% 6%;
-  margin: 10% 0 0 0;
+  margin: auto;
+  margin-top: 5%;
   color: #fff;
-  background-color: brown;
+  background-color: black;
   border-radius: 10px;
   font-weight: bold;
+  width: 50%;
+
 }
 
 button:hover {
-  color: brown;
-  background-color: #fff;
+  background-color: brown;
   transition: 0.2s ease-in-out;
 }
 
