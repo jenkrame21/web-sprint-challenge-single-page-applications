@@ -11,3 +11,94 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+  text-align: center;
+  background-color: brown;
+}
+
+header {
+  background-color: rgb(243, 243, 243);
+  padding: 3%;
+  margin: 3%;
+  border-radius: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+input {
+  margin-left: 10px;
+}
+
+input#name {
+  padding: 3%;
+  border-radius: 10px;
+  width: 100%;
+}
+
+input#special_instructions {
+  padding: 3%;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+select {
+  padding: 3%;
+  margin: 0;
+  width: 70%;
+  border-radius: 10px;
+}
+
+h1 {
+  background-color: brown;
+  border-radius: 20px;
+  color: #fff;
+  padding: 2%;
+  margin-top: 0;
+}
+
+div.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errors {
+  color: rgb(255, 136, 0);
+}
+
+button {
+  padding: 3% 6%;
+  margin: 10% 0 0 0;
+  color: #fff;
+  background-color: brown;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+button:hover{
+  color: brown;
+  background-color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.additives {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+

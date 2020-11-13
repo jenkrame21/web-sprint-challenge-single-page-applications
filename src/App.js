@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Route } from 'react-router-dom';
 import Pizza from './Pizza'
 import PizzaForm from './PizzaForm';
 
@@ -126,6 +127,7 @@ export default function App() {
       <header className="container">
         <h1>Lambda Eats</h1>
         <nav>
+        <Route exact path='/'>
           <PizzaForm
             values={formValues}
             change={inputChange}
@@ -133,6 +135,7 @@ export default function App() {
             disabled={disabled}
             errors={formErrors}
           />
+        </Route>
           {pizzaLovers.map((pizza) => {
             return <Pizza key={pizza.id} details={pizza} />;
           })}
