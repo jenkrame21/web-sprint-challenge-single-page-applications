@@ -11,3 +11,122 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+  text-align: center;
+  background-color: brown;
+}
+
+header {
+  background-color: rgb(243, 243, 243);
+  padding: 3%;
+  margin: 3%;
+  border-radius: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+label.additives {
+  display: flex;
+  flex-wrap: column, nowrap;
+}
+
+input {
+  margin-left: 10px;
+  padding: 2%;
+}
+
+input#name {
+  border-radius: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+input#special_instructions {
+  padding: 3%;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+select {
+  padding: 2%;
+  margin: 0;
+  width: 30%;
+  border-radius: 10px;
+}
+
+h1 {
+  background-color: brown;
+  border-radius: 20px;
+  color: #fff;
+  padding: 2%;
+  margin-top: 0;
+}
+
+div.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errors {
+  color: rgb(255, 136, 0);
+}
+
+button {
+  padding: 3% 6%;
+  margin: auto;
+  margin-top: 5%;
+  color: #fff;
+  background-color: black;
+  border-radius: 20px;
+  font-weight: bold;
+  width: 50%;
+
+}
+
+button:hover {
+  background-color: brown;
+  transition: 0.2s ease-in-out;
+}
+
+.additives {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  color: #fff;
+  padding: 0 0 3% 0;
+}
+
+.mainSubTitle {
+  background-color: black;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2% 3%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+p.choices {
+  margin-top: 0;
+}
+
+
+
