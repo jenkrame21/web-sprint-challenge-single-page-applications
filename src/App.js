@@ -60,7 +60,7 @@ export default function App() {
       })
       .catch((err) => {
         console.log(err)
-        alert(`Got an error there bud.`);
+        // alert(`Got an error there bud.`);
       });
   };
 
